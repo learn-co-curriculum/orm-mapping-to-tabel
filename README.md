@@ -52,7 +52,7 @@ DB[:conn]
 
 So, as we move through this reading, let's assume that our hypothetical program has just such a `config/environment.rb` file and that the `DB[:conn]` constant refers to our connection to the database. 
 
-Now that our hypothetical database is set up in our hypothetical program, let's move on to our `Song` class and it's equivalent database table. 
+Now that our hypothetical database is set up in our hypothetical program, let's move on to our `Song` class and its equivalent database table. 
 
 ### Creating the Table
 
@@ -277,7 +277,7 @@ end
 
 Here, we use keyword arguments to pass a name and album into our `#create` method. We use that name and album to instantiate a new song. Then, we use the `#save` method to persist that song to the database. 
 
-Notice that at the end of the method, we are returning the `song` instance that we instantiated. The return value of `#create` should alwasy be the object that we created. Why? Imagine you are working with your program and you create a new song:
+Notice that at the end of the method, we are returning the `song` instance that we instantiated. The return value of `#create` should always be the object that we created. Why? Imagine you are working with your program and you create a new song:
 
 ```ruby
 Song.create(name: "Hello", album: "25")
