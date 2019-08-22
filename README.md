@@ -323,7 +323,7 @@ This method will wrap the code we used above to create a new `Song` instance and
 class Song
   ...
 
-  def self.create(name:, album:)
+  def self.create(name, album)
     song = Song.new(name, album)
     song.save
     song
