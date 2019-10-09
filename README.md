@@ -44,7 +44,7 @@ require_relative '../lib/song.rb'
 DB = {:conn => SQLite3::Database.new("db/music.db")}
 ```
 
-This will create a new database called "music.db", stored inside the `db` subdirectory of our app *and* it will return a Ruby object that **represents the connection between our Ruby program and our newly-created SQL database**. Here's a look at the object that gets returned by the line of code above:
+This will create a new database called `music.db`, stored inside the `db` subdirectory of our app *and* it will return a Ruby object that **represents the connection between our Ruby program and our newly-created SQL database**. Here's a look at the object that gets returned by the line of code above:
 
 ```ruby
 #<SQLite3::Database:0x007f9d6c294508
@@ -61,7 +61,7 @@ This will create a new database called "music.db", stored inside the `db` subdir
 
 This object is created for us by the code provided by the SQLite-Ruby gem. Don't worry too much about what is going on under the hood. The important thing to understand is that this is the object that connects the rest of our Ruby program, i.e. any code we write to create artists, songs and genres, to our SQL database. 
 
-**Note*: There are a number of methods available to us, that are provided by the SQLite-Ruby gem, that we can call on the above object to execute commands against our database. 
+**Note**: There are a number of methods available to us, that are provided by the SQLite-Ruby gem, that we can call on the above object to execute commands against our database. 
 
 Here, we also set up a constant, `DB`, that is equal to a hash that contains our connection to the database. In our `lib/song.rb` file, we can therefore access the `DB` constant and the database connection it holds like this:
 
